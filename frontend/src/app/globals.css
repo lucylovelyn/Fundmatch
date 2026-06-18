@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #4f6ef7;
+  --brand-dark: #3b55e6;
+  --surface: #f8f9ff;
+  --card: #ffffff;
+  --border: #e4e8ff;
+  --text: #0f1629;
+  --muted: #6b7280;
+  --success: #10b981;
+  --warning: #f59e0b;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--surface);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* Encrypted badge pulse animation */
+@keyframes pulse-badge {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.encrypted-badge {
+  animation: pulse-badge 2s ease-in-out infinite;
+}
+
+/* Lock shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #e4e8ff 25%, #c7d0ff 50%, #e4e8ff 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
