@@ -1,9 +1,22 @@
 "use client";
 
-import { WagmiProvider } from "wagmi";
+import { WagmiConfig, createConfig, configureChains } from "wagmi";
+import { baseSepolia } from "wagmi/chains";
+import { publicProvider } from "wagmi/providers/public";
+import { InjectedConnector } from "wagmi/connectors/injected";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { wagmiConfig } from "../lib/wagmi";
 import "./globals.css";
+
+const { chains, publicClient } = configureChains(
+  [baseSepolia],
+  [publicProvider()]
+);
+
+const config = createConfig({
+  autoConnect: true,
+  connectors: [new InjectedConnector({ chains })],
+  publicClient,
+});
 
 const queryClient = new QueryClient();
 
@@ -20,11 +33,11 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <WagmiProvider config={wagmiConfig}>
+        <WagmiConfig config={config}>
           <QueryClientProvider client={queryClient}>
             {children}
           </QueryClientProvider>
-        </WagmiProvider>
+        </WagmiConfig>
       </body>
     </html>
   );
