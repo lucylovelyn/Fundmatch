@@ -111,7 +111,7 @@ export default function LandingPage() {
         <div className="nav-right">
           <a href="#how-it-works" className="nav-link">How it works</a>
           <a href="#technology" className="nav-link">Technology</a>
-          <Link href="/app" className="nav-cta">Launch App →</Link>
+          <Link href="/launch" className="nav-cta">Launch App →</Link>
         </div>
       </nav>
 
@@ -133,7 +133,7 @@ export default function LandingPage() {
           Your ARR, growth, and runway stay encrypted — even during matching.
         </p>
         <div className="hero-actions">
-          <Link href="/app" className="btn-primary">Get matched now →</Link>
+          <Link href="/launch" className="btn-primary">Get matched now →</Link>
           <a href="#how-it-works" className="btn-secondary">See how it works</a>
         </div>
 
@@ -245,7 +245,7 @@ export default function LandingPage() {
           Register as a founder or investor. FundMatch computes your compatibility without either side revealing what's behind the curtain.
         </p>
         <div className="hero-actions" style={{position:"relative"}}>
-          <Link href="/app" className="btn-primary">Find your match →</Link>
+          <Link href="/launch" className="btn-primary">Find your match →</Link>
           <a href="https://cofhe-docs.fhenix.zone" target="_blank" className="btn-secondary">Read the CoFHE docs</a>
         </div>
       </section>
@@ -259,7 +259,7 @@ export default function LandingPage() {
         <div className="footer-links">
           <a href="https://github.com/lucylovelyn/Fundmatch" target="_blank">GitHub</a>
           <a href="https://cofhe-docs.fhenix.zone" target="_blank">CoFHE Docs</a>
-          <Link href="/app">Launch App</Link>
+          <Link href="/launch">Launch App</Link>
         </div>
       </footer>
     </div>
