@@ -1,0 +1,308 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "FounderRegistry",
+  "sourceName": "contracts/FounderRegistry.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "got",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "expected",
+          "type": "uint8"
+        }
+      ],
+      "name": "InvalidEncryptedInput",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "founder",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "FounderRegistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "founder",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "FounderUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "founderAddresses",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "founderCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "founder",
+          "type": "address"
+        }
+      ],
+      "name": "getProfile",
+      "outputs": [
+        {
+          "internalType": "euint32",
+          "name": "arr",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "euint32",
+          "name": "growth",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "euint32",
+          "name": "runway",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "euint32",
+          "name": "industry",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "euint32",
+          "name": "stage",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bool",
+          "name": "registered",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "registeredAt",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "founder",
+          "type": "address"
+        }
+      ],
+      "name": "isRegistered",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "ctHash",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint8",
+              "name": "securityZone",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "utype",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes",
+              "name": "signature",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct InEuint32",
+          "name": "_arr",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "ctHash",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint8",
+              "name": "securityZone",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "utype",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes",
+              "name": "signature",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct InEuint32",
+          "name": "_growth",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "ctHash",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint8",
+              "name": "securityZone",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "utype",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes",
+              "name": "signature",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct InEuint32",
+          "name": "_runway",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "ctHash",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint8",
+              "name": "securityZone",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "utype",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes",
+              "name": "signature",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct InEuint32",
+          "name": "_industry",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "ctHash",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint8",
+              "name": "securityZone",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "utype",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes",
+              "name": "signature",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct InEuint32",
+          "name": "_stage",
+          "type": "tuple"
+        }
+      ],
+      "name": "registerFounder",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608080604052346015576106a6908161001a8239f35b5f80fdfe608060409080825260049081361015610016575f80fd5b5f3560e01c9081630f53a470146102f2575080632b26a09b146100f8578063773e3309146100da578063c3c5a547146100995763faab8b2b14610057575f80fd5b346100955760203660031901126100955735906001548210156100955761007f602092610371565b905491519160018060a01b039160031b1c168152f35b5f80fd5b503461009557602036600319011261009557356001600160a01b0381169190829003610095576020915f525f825260ff6005825f2001541690519015158152f35b8234610095575f366003190112610095576020906001549051908152f35b50346100955760031960a03682011261009557813567ffffffffffffffff80821161009557608083833603011261009557602435908082116100955760808483360301126100955760443593818511610095576080818636030112610095576064359082821161009557608081833603011261009557608435928311610095576080908336030112610095576005946101e76101bb6101dd6101bb6101d36101bb8c6101ca8f6101c06101bb6101bb92335f525f6020525f209f3690860161041a565b6104be565b9c3690840161041a565b9736910161041a565b9536908c0161041a565b9436908a0161041a565b936101f181610602565b6101fa82610602565b61020383610602565b61020c84610602565b61021585610602565b85556001850155600284015560038301558382015542600682015501805460ff81166102c35760019060ff191617905560015490680100000000000000008210156102b0575080600161026b9201600155610371565b81549060031b9033821b9160018060a01b03901b1916179055514281527f9c68c9933de8082946de64414a4839368c5f07c3b732b324fc7f2882ba23f10e60203392a2005b604190634e487b7160e01b5f525260245ffd5b505050514281527fd8af425112cee3a9ab5b35576dcc8f428256cda8e92258601aa5d9761fa84e3260203392a2005b919050346100955760203660031901126100955780356001600160a01b03811693908490036100955760e0935f525f602052805f209081549260018301549160028401549060038501549285015493600660ff600588015416960154968852602088015286015260608501526080840152151560a083015260c0820152f35b6001548110156103a65760015f527fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf601905f90565b634e487b7160e01b5f52603260045260245ffd5b6080810190811067ffffffffffffffff8211176103d657604052565b634e487b7160e01b5f52604160045260245ffd5b90601f8019910116810190811067ffffffffffffffff8211176103d657604052565b359060ff8216820361009557565b91906080838203126100955760405192610433846103ba565b8381358152602061044581840161040c565b818301526104556040840161040c565b6040830152606083013567ffffffffffffffff9384821161009557019084601f830112156100955781359384116103d6576040519461049d601f8601601f19168301876103ea565b8486528185840101116100955783606094825f940183880137850101520152565b60409060ff8282015116600481036105e45750606060ff918351906104e2826103ba565b5f825282602093835f86809601525f88820152015260e48151836060878286015116940151885192610513846103ba565b83528183019485528789840160048152606085019283528a51998a9788966313fce3b160e11b88528d6004890152516044880152511660648601525116608484015251608060a484015280519182918260c4860152018484015e5f838284010152336024830152601f801991011681010301815f73ea30c4b8b44078bbf8a6ef5b9f1ec1626c7848d95af19283156105db57505f926105b157505090565b90809250813d83116105d4575b6105c881836103ea565b81010312610095575190565b503d6105be565b513d5f823e3d90fd5b6044908351906367cf307160e01b8252600482015260046024820152fd5b73ea30c4b8b44078bbf8a6ef5b9f1ec1626c7848d990813b15610095575f91604483926040519485938492631974142760e21b845260048401523060248401525af18015610665576106515750565b67ffffffffffffffff81116103d657604052565b6040513d5f823e3d90fdfea2646970667358221220287f7a7ccce01091ef975fd77471f77f643efd19cf3924e6a18a433b6b9ce61664736f6c63430008190033",
+  "deployedBytecode": "0x608060409080825260049081361015610016575f80fd5b5f3560e01c9081630f53a470146102f2575080632b26a09b146100f8578063773e3309146100da578063c3c5a547146100995763faab8b2b14610057575f80fd5b346100955760203660031901126100955735906001548210156100955761007f602092610371565b905491519160018060a01b039160031b1c168152f35b5f80fd5b503461009557602036600319011261009557356001600160a01b0381169190829003610095576020915f525f825260ff6005825f2001541690519015158152f35b8234610095575f366003190112610095576020906001549051908152f35b50346100955760031960a03682011261009557813567ffffffffffffffff80821161009557608083833603011261009557602435908082116100955760808483360301126100955760443593818511610095576080818636030112610095576064359082821161009557608081833603011261009557608435928311610095576080908336030112610095576005946101e76101bb6101dd6101bb6101d36101bb8c6101ca8f6101c06101bb6101bb92335f525f6020525f209f3690860161041a565b6104be565b9c3690840161041a565b9736910161041a565b9536908c0161041a565b9436908a0161041a565b936101f181610602565b6101fa82610602565b61020383610602565b61020c84610602565b61021585610602565b85556001850155600284015560038301558382015542600682015501805460ff81166102c35760019060ff191617905560015490680100000000000000008210156102b0575080600161026b9201600155610371565b81549060031b9033821b9160018060a01b03901b1916179055514281527f9c68c9933de8082946de64414a4839368c5f07c3b732b324fc7f2882ba23f10e60203392a2005b604190634e487b7160e01b5f525260245ffd5b505050514281527fd8af425112cee3a9ab5b35576dcc8f428256cda8e92258601aa5d9761fa84e3260203392a2005b919050346100955760203660031901126100955780356001600160a01b03811693908490036100955760e0935f525f602052805f209081549260018301549160028401549060038501549285015493600660ff600588015416960154968852602088015286015260608501526080840152151560a083015260c0820152f35b6001548110156103a65760015f527fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf601905f90565b634e487b7160e01b5f52603260045260245ffd5b6080810190811067ffffffffffffffff8211176103d657604052565b634e487b7160e01b5f52604160045260245ffd5b90601f8019910116810190811067ffffffffffffffff8211176103d657604052565b359060ff8216820361009557565b91906080838203126100955760405192610433846103ba565b8381358152602061044581840161040c565b818301526104556040840161040c565b6040830152606083013567ffffffffffffffff9384821161009557019084601f830112156100955781359384116103d6576040519461049d601f8601601f19168301876103ea565b8486528185840101116100955783606094825f940183880137850101520152565b60409060ff8282015116600481036105e45750606060ff918351906104e2826103ba565b5f825282602093835f86809601525f88820152015260e48151836060878286015116940151885192610513846103ba565b83528183019485528789840160048152606085019283528a51998a9788966313fce3b160e11b88528d6004890152516044880152511660648601525116608484015251608060a484015280519182918260c4860152018484015e5f838284010152336024830152601f801991011681010301815f73ea30c4b8b44078bbf8a6ef5b9f1ec1626c7848d95af19283156105db57505f926105b157505090565b90809250813d83116105d4575b6105c881836103ea565b81010312610095575190565b503d6105be565b513d5f823e3d90fd5b6044908351906367cf307160e01b8252600482015260046024820152fd5b73ea30c4b8b44078bbf8a6ef5b9f1ec1626c7848d990813b15610095575f91604483926040519485938492631974142760e21b845260048401523060248401525af18015610665576106515750565b67ffffffffffffffff81116103d657604052565b6040513d5f823e3d90fdfea2646970667358221220287f7a7ccce01091ef975fd77471f77f643efd19cf3924e6a18a433b6b9ce61664736f6c63430008190033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
