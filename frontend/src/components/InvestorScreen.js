@@ -36,6 +36,7 @@ export default function InvestorScreen() {
     address: CONTRACT_ADDRESSES.InvestorRegistry,
     abi: INVESTOR_REGISTRY_ABI,
     functionName: "registerInvestor",
+    mode: "recklesslyUnprepared",
     onSuccess: () => setSubmitted(true),
   });
 
@@ -43,7 +44,7 @@ export default function InvestorScreen() {
     if (!isConnected) return alert("Please connect your wallet first.");
     if (!form.minArr || !form.minGrowth || !form.minRunway) return alert("Please fill in all required fields.");
    write({
-      args: [
+                    recklesslySetUnpreparedArgs: [
         BigInt(Math.round(parseFloat(form.minArr))),
         BigInt(Math.round(parseFloat(form.minGrowth) * 100)),
         BigInt(Math.round(parseFloat(form.minRunway))),

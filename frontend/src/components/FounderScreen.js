@@ -39,6 +39,7 @@ export default function FounderScreen() {
     address: CONTRACT_ADDRESSES.FounderRegistry,
     abi: FOUNDER_REGISTRY_ABI,
     functionName: "registerFounder",
+    mode: "recklesslyUnprepared",
     onSuccess: () => setSubmitted(true),
   });
 
@@ -48,8 +49,8 @@ export default function FounderScreen() {
     const arrInThousands = Math.round(parseFloat(form.arr));
     const growthBasisPoints = Math.round(parseFloat(form.growth) * 100);
     const runwayMonths = Math.round(parseFloat(form.runway));
-   write({
-      args: [
+  write({
+      recklesslySetUnpreparedArgs: [
         BigInt(arrInThousands),
         BigInt(growthBasisPoints),
         BigInt(runwayMonths),
