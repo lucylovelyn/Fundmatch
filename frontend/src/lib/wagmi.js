@@ -1,20 +1,19 @@
-import { createConfig, configureChains } from "wagmi";
+import { createConfig, http } from "wagmi";
 import { baseSepolia } from "wagmi/chains";
-import { publicProvider } from "wagmi/providers/public";
-import { InjectedConnector } from "wagmi/connectors/injected";
-
-const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [baseSepolia],
-  [publicProvider()]
-);
+import { injected, metaMask } from "wagmi/connectors";
 
 export const wagmiConfig = createConfig({
-  autoConnect: true,
-  connectors: [new InjectedConnector({ chains })],
-  publicClient,
-  webSocketPublicClient,
+  chains: [baseSepolia],
+  connectors: [
+    injected(),
+    metaMask(),
+  ],
+  transports: {
+    [baseSepolia.id]: http("https://sepolia.base.org"),
+  },
 });
 
+// Industry code mapping
 export const INDUSTRIES = {
   1: "AI / ML",
   2: "Fintech",
@@ -23,6 +22,7 @@ export const INDUSTRIES = {
   5: "Other",
 };
 
+// Stage code mapping
 export const STAGES = {
   1: "Pre-seed",
   2: "Seed",
