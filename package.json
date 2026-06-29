@@ -10,9 +10,9 @@
     "frontend": "cd frontend && npm run dev"
   },
   "devDependencies": {
-    "hardhat": "^2.22.0",
+    "@cofhe/hardhat-plugin": "^0.5.1",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "@cofhe/hardhat-plugin": "^0.5.1"
+    "hardhat": "^2.22.0"
   },
   "dependencies": {
     "@fhenixprotocol/cofhe-contracts": "^0.1.3",
